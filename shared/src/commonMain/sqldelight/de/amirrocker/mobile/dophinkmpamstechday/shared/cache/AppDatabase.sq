@@ -1,0 +1,58 @@
+CREATE TABLE Contract (
+    id INTEGER DEFAULT 0,
+    business TEXT NOT NULL,
+    city TEXT NOT NULL,
+    country_code TEXT NOT NULL,
+    firstname TEXT NOT NULL,
+    house_number TEXT NOT NULL,
+    is_confirmed TEXT NOT NULL,
+    salutation TEXT NOT NULL,
+    state TEXT NOT NULL,
+    street TEXT NOT NULL,
+    surname TEXT NOT NULL,
+    title TEXT NOT NULL,
+    zip_code TEXT NOT NULL,
+    mobile TEXT NOT NULL,
+    email TEXT NOT NULL
+);
+
+insertContract:
+INSERT INTO Contract(
+    id,
+    business,
+    city,
+    country_code,
+    firstname,
+    house_number,
+    is_confirmed,
+    salutation,
+    state,
+    street,
+    surname,
+    title,
+    zip_code,
+    mobile,
+    email
+)
+VALUES(
+?,
+ ?,
+  ?,
+   ?,
+    ?,
+     ?,
+      ?,
+       ?,
+        ?,
+         ?,
+          ?,
+           ?,
+            ?,
+             ?,
+              ?);
+
+selectContractById:
+SELECT * FROM Contract WHERE id=?;
+
+selectAllContracts:
+SELECT * FROM Contract;
